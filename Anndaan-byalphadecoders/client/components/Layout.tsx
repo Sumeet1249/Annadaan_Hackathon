@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 import Navigation from "./Navigation";
 import { Heart } from "lucide-react";
 
@@ -72,7 +72,7 @@ const Layout = ({ children }: LayoutProps) => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
               <ul className="space-y-2 text-gray-400">
-                <li>Email: hello@annadaan.org</li>
+                <li>Email: alphadecoders@annadaan.org</li>
                 <li>Phone: +91 9128364783</li>
                 <li>Address: Kolkata, India</li>
               </ul>
