@@ -22,7 +22,7 @@ const Layout = ({ children }: LayoutProps) => {
                 <div className="flex flex-col">
                   <span className="text-xl font-bold">Annadaan</span>
                   <span className="text-sm text-gray-400">
-                    Because Someone Is Hungry
+                  Together, We Can End Hunger
                   </span>
                 </div>
               </div>
