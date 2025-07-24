@@ -425,7 +425,7 @@ const Admin = () => {
                 All Donations
               </h2>
               <div className="flex space-x-2">
-                <Button onClick={handleExportData} variant="outline">
+                <Button onClick={handleExportData} className="border border-gray-300 bg-white hover:bg-gray-100">
                   <Download className="mr-2 h-4 w-4" />
                   Export Data
                 </Button>
@@ -509,7 +509,7 @@ const Admin = () => {
                           <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                             <DropdownMenu>
                               <DropdownMenuTrigger asChild>
-                                <Button variant="ghost" size="sm">
+                                <Button className="bg-transparent hover:bg-gray-100 p-2 h-8 w-8">
                                   <MoreVertical className="h-4 w-4" />
                                 </Button>
                               </DropdownMenuTrigger>
@@ -596,7 +596,7 @@ const Admin = () => {
                                 {user.email}
                               </p>
                               <div className="flex items-center space-x-2 mt-1">
-                                <Badge variant="outline" className="text-xs">
+                                <Badge className="text-xs border border-gray-300 bg-white">
                                   {user.role}
                                 </Badge>
                                 <Badge
@@ -609,8 +609,7 @@ const Admin = () => {
                           </div>
                           <div className="flex items-center space-x-2">
                             <Button
-                              variant="outline"
-                              size="sm"
+                              className="border border-gray-300 bg-white hover:bg-gray-100 px-3 py-1 text-sm"
                               onClick={() => setSelectedUser(user)}
                             >
                               <Eye className="h-4 w-4 mr-1" />
@@ -618,7 +617,7 @@ const Admin = () => {
                             </Button>
                             <DropdownMenu>
                               <DropdownMenuTrigger asChild>
-                                <Button variant="ghost" size="sm">
+                                <Button className="p-2 h-8 w-8 bg-transparent hover:bg-gray-100">
                                   <MoreVertical className="h-4 w-4" />
                                 </Button>
                               </DropdownMenuTrigger>
@@ -764,11 +763,11 @@ const Admin = () => {
                       )}
 
                       <div className="flex space-x-2">
-                        <Button size="sm" className="flex-1">
+                        <Button className="flex-1 px-3 py-1 text-sm">
                           <Edit className="mr-2 h-4 w-4" />
                           Edit
                         </Button>
-                        <Button size="sm" variant="outline" className="flex-1">
+                        <Button className="flex-1 border border-gray-300 bg-white hover:bg-gray-100 px-3 py-1 text-sm">
                           <Ban className="mr-2 h-4 w-4" />
                           Suspend
                         </Button>
@@ -812,10 +811,10 @@ const Admin = () => {
                           </AvatarFallback>
                         </Avatar>
                         <div>
-                          <Button variant="outline" size="sm">
+                          <Button className="border border-gray-300 bg-white hover:bg-gray-100 px-3 py-1 text-sm">
                             Change Photo
                           </Button>
-                          <p className="text-sm text-gray-500 mt-1">
+                          <p className="text-xs text-gray-500 mt-1">
                             JPG, PNG up to 5MB
                           </p>
                         </div>
@@ -863,7 +862,7 @@ const Admin = () => {
                         <Button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white">
                           Save Changes
                         </Button>
-                        <Button variant="outline">Cancel</Button>
+                        <Button className="border border-gray-300 bg-white hover:bg-gray-100">Cancel</Button>
                       </div>
                     </form>
                   </CardContent>
@@ -917,15 +916,15 @@ const Admin = () => {
                     <CardTitle>Security</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-3">
-                    <Button variant="outline" className="w-full justify-start">
+                    <Button className="w-full justify-start border border-gray-300 bg-white hover:bg-gray-100">
                       <Shield className="mr-2 h-4 w-4" />
                       Change Password
                     </Button>
-                    <Button variant="outline" className="w-full justify-start">
+                    <Button className="w-full justify-start border border-gray-300 bg-white hover:bg-gray-100">
                       <Activity className="mr-2 h-4 w-4" />
                       Enable 2FA
                     </Button>
-                    <Button variant="outline" className="w-full justify-start">
+                    <Button className="w-full justify-start border border-gray-300 bg-white hover:bg-gray-100">
                       <FileText className="mr-2 h-4 w-4" />
                       Activity Log
                     </Button>
@@ -994,19 +993,19 @@ const Admin = () => {
                   <CardDescription>Export and backup options</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <Button variant="outline" className="w-full justify-start">
+                  <Button className="w-full justify-start border border-gray-300 bg-white hover:bg-gray-100">
                     <Download className="mr-2 h-4 w-4" />
                     Export All Data
                   </Button>
-                  <Button variant="outline" className="w-full justify-start">
+                  <Button className="w-full justify-start border border-gray-300 bg-white hover:bg-gray-100">
                     <Download className="mr-2 h-4 w-4" />
                     Export User Data
                   </Button>
-                  <Button variant="outline" className="w-full justify-start">
+                  <Button className="w-full justify-start border border-gray-300 bg-white hover:bg-gray-100">
                     <Download className="mr-2 h-4 w-4" />
                     Export Donation Records
                   </Button>
-                  <Button variant="outline" className="w-full justify-start">
+                  <Button className="w-full justify-start border border-gray-300 bg-white hover:bg-gray-100">
                     <Building className="mr-2 h-4 w-4" />
                     Generate Reports
                   </Button>
