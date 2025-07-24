@@ -101,7 +101,6 @@ const Logout = () => {
                 </Button>
                 <Button
                   asChild
-                  variant="outline"
                   className="w-full border-orange-300 text-orange-700 hover:bg-orange-50"
                 >
                   <Link to="/sign-in">Sign In Again</Link>
@@ -170,7 +169,6 @@ const Logout = () => {
 
                   <Button
                     asChild
-                    variant="outline"
                     className="w-full border-gray-300"
                   >
                     <Link to="/">

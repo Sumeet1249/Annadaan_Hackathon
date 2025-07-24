@@ -20,7 +20,6 @@ import {
   Package,
   Navigation,
   CheckCircle2,
-  AlertCircle,
   MessageCircle,
   Route,
   Timer,
@@ -150,10 +149,10 @@ const VolunteerCoordination: React.FC<VolunteerCoordinationProps> = ({
                 Donation Details
               </span>
               <Badge
-                variant={
+                className={
                   currentDonation.status === "delivered"
-                    ? "default"
-                    : "secondary"
+                    ? ""
+                    : "bg-gray-200 text-gray-800"
                 }
               >
                 {currentDonation.status}
@@ -277,8 +276,7 @@ const VolunteerCoordination: React.FC<VolunteerCoordinationProps> = ({
                                   </div>
                                 </div>
                                 <Badge
-                                  variant="outline"
-                                  className="text-green-600"
+                                  className="border border-green-600 text-green-600"
                                 >
                                   Available
                                 </Badge>
@@ -289,17 +287,20 @@ const VolunteerCoordination: React.FC<VolunteerCoordinationProps> = ({
                       </div>
                       <div className="flex justify-end space-x-2 pt-4">
                         <Button
-                          variant="outline"
+                          className="border border-gray-300"
                           onClick={() => setSelectedVolunteer(null)}
+                          type="button"
                         >
                           Cancel
                         </Button>
                         <Button
+                          className="border border-blue-600"
                           onClick={() =>
                             selectedVolunteer &&
                             handleAssignVolunteer(selectedVolunteer)
                           }
                           disabled={!selectedVolunteer || isAssigning}
+                          type="button"
                         >
                           {isAssigning ? "Assigning..." : "Assign Volunteer"}
                         </Button>
@@ -310,14 +311,14 @@ const VolunteerCoordination: React.FC<VolunteerCoordinationProps> = ({
 
               {getNextStatus(currentDonation.status) && (
                 <Button
-                  variant="outline"
+                  className="flex items-center border border-gray-300"
                   onClick={() => {
                     const nextStatus = getNextStatus(currentDonation.status);
                     if (nextStatus) {
                       onUpdateStatus(currentDonation.id, nextStatus);
                     }
                   }}
-                  className="flex items-center"
+                  type="button"
                 >
                   <CheckCircle2 className="h-4 w-4 mr-2" />
                   {getStatusActions(currentDonation)}
@@ -326,11 +327,11 @@ const VolunteerCoordination: React.FC<VolunteerCoordinationProps> = ({
 
               {currentDonation.volunteer && (
                 <>
-                  <Button variant="outline" size="sm">
+                  <Button className="border border-gray-300 text-sm px-2 py-1" type="button">
                     <MessageCircle className="h-4 w-4 mr-2" />
                     Message Volunteer
                   </Button>
-                  <Button variant="outline" size="sm">
+                  <Button className="border border-gray-300 text-sm px-2 py-1" type="button">
                     <Route className="h-4 w-4 mr-2" />
                     Track Route
                   </Button>
@@ -346,7 +347,7 @@ const VolunteerCoordination: React.FC<VolunteerCoordinationProps> = ({
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <span>Available Volunteers</span>
-            <Badge variant="secondary">
+            <Badge className="bg-gray-200 text-gray-800">
               {availableVolunteers.length} available
             </Badge>
           </CardTitle>
@@ -387,19 +388,19 @@ const VolunteerCoordination: React.FC<VolunteerCoordinationProps> = ({
                         </div>
                       </div>
                     </div>
-                    <Badge variant="outline" className="text-green-600 text-xs">
+                    <Badge className="border border-green-600 text-green-600 text-xs flex items-center">
                       <div className="w-2 h-2 bg-green-500 rounded-full mr-1"></div>
                       Online
                     </Badge>
                   </div>
                   {currentDonation && (
-                    <div className="text-xs text-gray-600">
+                    <div className="text-xs text-gray-500 mt-1">
                       {calculateDistance(
                         currentDonation.location.lat,
                         currentDonation.location.lng,
                         volunteer.location.lat,
                         volunteer.location.lng,
-                      )}
+                      )}{" "}
                       km from pickup location
                     </div>
                   )}
@@ -416,13 +417,13 @@ const VolunteerCoordination: React.FC<VolunteerCoordinationProps> = ({
           <CardHeader>
             <CardTitle className="flex items-center justify-between">
               <span>Active Deliveries</span>
-              <Badge variant="secondary">
+              <Badge className="bg-gray-200 text-gray-800">
                 {activeVolunteers.length} in progress
               </Badge>
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {activeVolunteers.map((volunteer) => {
                 const volunteerDonations = donations.filter(
                   (d) =>
@@ -455,12 +456,11 @@ const VolunteerCoordination: React.FC<VolunteerCoordinationProps> = ({
                           </div>
                         </div>
                       </div>
-                      <Badge variant="outline" className="text-orange-600">
+                      <Badge className="border border-orange-600 text-orange-600 flex items-center">
                         <div className="w-2 h-2 bg-orange-500 rounded-full mr-1"></div>
                         Active
                       </Badge>
                     </div>
-
                     {volunteerDonations.map((donation) => (
                       <div
                         key={donation.id}
@@ -471,18 +471,15 @@ const VolunteerCoordination: React.FC<VolunteerCoordinationProps> = ({
                             {donation.donorName}
                           </span>
                           <Badge
-                            size="sm"
-                            variant={
-                              donation.status === "in_transit"
-                                ? "default"
-                                : "secondary"
+                            className={
+                              "text-xs px-2 py-1 " +
+                              (donation.status === "in_transit"
+                                ? ""
+                                : "bg-gray-200 text-gray-800")
                             }
                           >
                             {donation.status}
                           </Badge>
-                        </div>
-                        <div className="text-gray-600 text-xs mt-1">
-                          {donation.location.address}
                         </div>
                       </div>
                     ))}

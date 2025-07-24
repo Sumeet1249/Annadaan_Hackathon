@@ -266,7 +266,7 @@ const TrackDonation: React.FC = () => {
                     <Search className="h-5 w-5 mr-2" />
                     Search Donation
                   </span>
-                  <Badge variant="secondary" className="flex items-center">
+                  <Badge className="flex items-center">
                     <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
                     {donations.length} Active
                   </Badge>
@@ -286,9 +286,9 @@ const TrackDonation: React.FC = () => {
                     Search
                   </Button>
                   <Button
-                    variant="outline"
                     onClick={refreshData}
                     disabled={isLoading}
+                    className="border border-gray-300 bg-white text-gray-900 hover:bg-gray-100"
                   >
                     <RefreshCw
                       className={cn(
@@ -313,7 +313,7 @@ const TrackDonation: React.FC = () => {
                         <Package className="h-5 w-5 mr-2" />
                         Donation Details
                       </span>
-                      <Badge variant="outline" className="flex items-center">
+                      <Badge className="flex items-center">
                         <div
                           className={cn(
                             "w-2 h-2 rounded-full mr-2",
@@ -468,7 +468,7 @@ const TrackDonation: React.FC = () => {
                       We couldn't find a donation matching "{searchId}". Please
                       check your donation ID, name, or address and try again.
                     </p>
-                    <Button variant="outline" onClick={() => setSearchId("")}>
+                    <Button onClick={() => setSearchId("")}>
                       Clear Search
                     </Button>
                   </CardContent>
@@ -512,7 +512,6 @@ const TrackDonation: React.FC = () => {
                         </div>
                         <div className="text-right">
                           <Badge
-                            variant="outline"
                             className="text-xs capitalize"
                           >
                             {donation.status.replace("_", " ")}

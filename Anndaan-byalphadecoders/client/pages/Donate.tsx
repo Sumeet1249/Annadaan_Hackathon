@@ -254,8 +254,7 @@ const Donate = () => {
                       />
                       <Button
                         type="button"
-                        variant="outline"
-                        className="shrink-0"
+                        className="shrink-0 border border-gray-300 bg-white text-gray-700 hover:bg-gray-100"
                         onClick={handleGetCurrentLocation}
                         disabled={isGettingLocation}
                       >

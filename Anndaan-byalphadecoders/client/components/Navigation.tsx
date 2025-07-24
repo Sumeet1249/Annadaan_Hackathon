@@ -78,7 +78,6 @@ const Navigation = () => {
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button
-                    variant="ghost"
                     className="relative h-8 w-8 rounded-full"
                   >
                     <Avatar className="h-8 w-8">
@@ -133,8 +132,7 @@ const Navigation = () => {
           {/* Mobile menu button */}
           <div className="md:hidden">
             <Button
-              variant="ghost"
-              size="sm"
+              className="h-8 w-8 p-1"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? (

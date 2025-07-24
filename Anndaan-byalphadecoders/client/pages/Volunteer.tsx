@@ -302,8 +302,7 @@ const Volunteer = () => {
                 Available Donation Requests
               </h2>
               <Button
-                variant="outline"
-                className="border-orange-300 text-orange-700 hover:bg-orange-50"
+                className="border border-orange-300 text-orange-700 hover:bg-orange-50 bg-white"
               >
                 <Navigation className="mr-2 h-4 w-4" />
                 Refresh Location
@@ -368,7 +367,7 @@ const Volunteer = () => {
                             <CheckCircle className="mr-2 h-4 w-4" />
                             Accept Task
                           </Button>
-                          <Button variant="outline" size="icon">
+                          <Button className="border border-gray-300 bg-white p-2 rounded-full">
                             <Phone className="h-4 w-4" />
                           </Button>
                         </div>
@@ -435,10 +434,10 @@ const Volunteer = () => {
                             <CheckCircle className="mr-2 h-4 w-4" />
                             Mark as Delivered
                           </Button>
-                          <Button variant="outline" size="icon">
+                          <Button className="border border-gray-300 bg-white p-2 rounded-full">
                             <Navigation className="h-4 w-4" />
                           </Button>
-                          <Button variant="outline" size="icon">
+                          <Button className="border border-gray-300 bg-white p-2 rounded-full">
                             <Phone className="h-4 w-4" />
                           </Button>
                         </div>

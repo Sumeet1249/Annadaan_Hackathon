@@ -173,7 +173,7 @@ const Contact = () => {
               >
                 Send Another Message
               </Button>
-              <Button variant="outline" asChild>
+              <Button className="border border-gray-300 bg-white text-gray-900 hover:bg-gray-100" asChild>
                 <a href="/">Back to Home</a>
               </Button>
             </div>
@@ -242,7 +242,7 @@ const Contact = () => {
                   <p className="font-semibold text-gray-900 mb-2">
                     {method.value}
                   </p>
-                  <Badge variant="outline" className="text-xs">
+                  <Badge className="text-xs border border-gray-300 bg-white text-gray-900">
                     {method.available}
                   </Badge>
                 </CardContent>
@@ -509,8 +509,10 @@ const Contact = () => {
                   <div className="flex items-center justify-between">
                     <CardTitle className="text-xl">{office.city}</CardTitle>
                     <Badge
-                      variant={
-                        office.type === "Headquarters" ? "default" : "outline"
+                      className={
+                        office.type === "Headquarters"
+                          ? "bg-orange-600 text-white"
+                          : "bg-white text-orange-600 border border-orange-600"
                       }
                     >
                       {office.type}

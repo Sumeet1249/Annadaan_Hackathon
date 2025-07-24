@@ -267,7 +267,6 @@ const SignUp = () => {
             <Button
               onClick={handleGoogleSignUp}
               disabled={isLoading}
-              variant="outline"
               className="w-full border-gray-300 hover:bg-gray-50"
             >
               <Chrome className="mr-2 h-4 w-4" />

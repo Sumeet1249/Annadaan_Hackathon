@@ -73,7 +73,6 @@ export default function Index() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link to="/donate">
                 <Button
-                  size="lg"
                   className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold py-4 px-8 text-lg"
                 >
                   <Heart className="mr-2 h-5 w-5" />
@@ -82,9 +81,7 @@ export default function Index() {
               </Link>
               <Link to="/volunteer">
                 <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-orange-300 text-orange-700 hover:bg-orange-50 font-semibold py-4 px-8 text-lg"
+                  className="border-orange-300 text-orange-700 hover:bg-orange-50 font-semibold py-4 px-8 text-lg border"
                 >
                   <Users className="mr-2 h-5 w-5" />
                   Become a Volunteer
@@ -298,8 +295,6 @@ export default function Index() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link to="/donate">
               <Button
-                size="lg"
-                variant="secondary"
                 className="bg-white text-orange-600 hover:bg-gray-100 font-semibold py-4 px-8 text-lg"
               >
                 <Heart className="mr-2 h-5 w-5" />
@@ -308,9 +303,7 @@ export default function Index() {
             </Link>
             <Link to="/volunteer">
               <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-orange-600 font-semibold py-4 px-8 text-lg"
+                className="border-white text-white hover:bg-white hover:text-orange-600 font-semibold py-4 px-8 text-lg border"
               >
                 <Users className="mr-2 h-5 w-5" />
                 Volunteer Now
