@@ -61,19 +61,21 @@ export default function Index() {
               "The food you waste could be someone’s hope for the day."
             </p> */}
 
-            <p className="text-xl md:text-2xl text-white/90 mb-6 leading-relaxed">
+            {/* <p className="text-xl md:text-2xl text-white/90 mb-6 leading-relaxed">
               With real-time tech, passionate volunteers, and community partnerships,
               we're turning food waste into nourishment and compassion.
-            </p>
+            </p> */}
 
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed italic">
               "Hunger isn't a lack of food. It's a failure to share."
             </p>
+            <br />
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link to="/donate">
                 <Button
-                  className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold py-4 px-8 text-lg"
+                  
+                  className="flex items-center justify-center gap-3 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold py-3 px-6 text-lg rounded-full shadow-md hover:shadow-lg transition duration-300 ease-in-out"
                 >
                   <Heart className="mr-2 h-5 w-5" />
                   Donate Food
@@ -81,11 +83,15 @@ export default function Index() {
               </Link>
               <Link to="/volunteer">
                 <Button
-                  className="border-orange-300 text-orange-700 hover:bg-orange-50 font-semibold py-4 px-8 text-lg border"
-                >
-                  <Users className="mr-2 h-5 w-5" />
-                  Become a Volunteer
-                </Button>
+  className="flex items-center justify-center gap-3 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold py-3 px-6 text-lg rounded-full shadow-md hover:shadow-lg transition duration-300 ease-in-out"
+>
+  <Users className="w-5 h-5" />
+  Become a Volunteer
+</Button>
+
+
+
+
               </Link>
             </div>
           </div>
@@ -295,6 +301,7 @@ export default function Index() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link to="/donate">
               <Button
+                
                 className="bg-white text-orange-600 hover:bg-gray-100 font-semibold py-4 px-8 text-lg"
               >
                 <Heart className="mr-2 h-5 w-5" />
@@ -303,7 +310,8 @@ export default function Index() {
             </Link>
             <Link to="/volunteer">
               <Button
-                className="border-white text-white hover:bg-white hover:text-orange-600 font-semibold py-4 px-8 text-lg border"
+                
+                className="border-white text-white hover:bg-white hover:text-orange-600 font-semibold py-4 px-8 text-lg"
               >
                 <Users className="mr-2 h-5 w-5" />
                 Volunteer Now
@@ -315,3 +323,9 @@ export default function Index() {
     </div>
   );
 }
+
+
+
+
+
+
